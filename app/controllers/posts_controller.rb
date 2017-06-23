@@ -4,9 +4,21 @@ class PostsController < ApplicationController
   end
   
   def index
+    @posts = Post.all
   end
   
   def create
-    redirect_to :root
+    @post = Post.create(post_params)
+    if @post.save
+      flash[:success] = "New image posted!"
+      redirect_to posts_path
+    else
+      render :new
+    end
   end
+  
+  private
+    def post_params
+      params.require(:post).permit(:image, :caption)
+    end
 end

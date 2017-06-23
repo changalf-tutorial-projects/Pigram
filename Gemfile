@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Use Bootstrap library to beautify pages
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 # Use Paperclip for uploading images
 gem 'paperclip', '~> 4.2'

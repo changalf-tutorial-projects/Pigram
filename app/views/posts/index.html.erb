@@ -1,1 +1,9 @@
-<h1>Pigram</h1>
+<div class="text-center">
+  <h1>Pigram</h1>
+</div>
+
+<% @posts.each do |post| %>
+  <%= image_tag(post.image, width: '350', height: '350') %>
+  <%= post.caption %>
+<% end %>
+
