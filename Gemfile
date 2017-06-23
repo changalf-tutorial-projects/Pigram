@@ -32,8 +32,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Bootstrap library to beautify pages
+gem 'bootstrap-sass'
+
 # Use Paperclip for uploading images
 gem 'paperclip', '~> 4.2'
+
+# Use Simpleform to create custom forms
+gem 'simple_form', '~> 3.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
