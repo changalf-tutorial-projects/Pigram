@@ -2,8 +2,21 @@
   <h1>Pigram</h1>
 </div>
 
-<% @posts.each do |post| %>
-  <%= image_tag(post.image, width: '350', height: '350') %>
-  <%= post.caption %>
-<% end %>
+<div class="row post-wrapper">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Ben Walker
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url, height: '350', width: '350', class: 'image-responsive'), post_path(post) %>
+        <p class="caption">
+          <%= post.caption %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
 
