@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      flash[:success] = "New image posted!"
+      flash[:success_create] = "New image posted!"
       redirect_to posts_path
     else
       render :new
@@ -22,9 +22,15 @@ class PostsController < ApplicationController
   end
   
   def edit
+    @post = Post.find(params[:id])
   end
   
   def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      flash[:success_update] = "Image updated!"
+      redirect_to post_path
+    end
   end
   
   private
