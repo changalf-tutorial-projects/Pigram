@@ -17,10 +17,19 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+body {
+  background-color: #F2F2F2;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
 .navbar {
   background: #76b852;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-container {
+  height: 55px;
 }
 
 .navbar-header {
@@ -31,6 +40,9 @@
   font-family: 'Pacifico', cursive;
   font-size: 22px;
   font-weight: 800;
+  a {
+    color: #125688;
+  }
 }
 
 .navbar-nav {
@@ -52,4 +64,55 @@
 
 .post-well {
   margin-top: 50px;
+}
+
+.posts-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 642px;
+  width: 100%;
+}
+
+.post {
+  background-color: #FFFFFF;
+  border: 1px solid #EDEEEE;
+  border-radius: 3px;
+  margin-bottom: 60px;
+}
+
+.post-head {
+  height: 64px;
+  padding: 14px 20px;
+  color: #125688;
+  font-size: 15px;
+  line-height: 18px;
+  .thumbnail {}
+  .name {
+    display: block;
+  }
+}
+
+.image {
+  border-bottom: 1px solid #EEEFEF;
+  border-top: 1px solid #EEEFEF;
+}
+
+.caption {
+  padding: 24px 24px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border: 1px solid #EEEFEF;
+  border-radius: 3px;
+}
+
+.edit-links {
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
