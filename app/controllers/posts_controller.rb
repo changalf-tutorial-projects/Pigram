@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  
   def new 
     @post = Post.new
   end
@@ -13,40 +16,49 @@ class PostsController < ApplicationController
       flash[:success_create] = "New image posted!"
       redirect_to posts_path
     else
+      flash_unsuccessful_message
       render :new
     end
   end
   
   def show
-    @post = Post.find(params[:id])
   end
   
   def edit
-    @post = Post.find(params[:id])
   end
   
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success_update] = "Image updated!"
       redirect_to post_path
       # redirect_to post_path(@post)
+    else
+      flash_unsuccessful_message
     end
   end
   
   def destroy
-    @post = Post.find(params[:id])
     if @post.destroy
       flash[:success_destroy] = "Image deleted!"
-      redirect_to posts_path
+      redirect_to root_path
     else 
-      flash[:unsuccess_destroy] = "Something went wrong!"
-      render action :edit
+      flash_unsuccessful_message
+      render :edit
     end
   end
   
   private
+    def set_post
+      @post = Post.find(params[:id])
+    end
+    
     def post_params
       params.require(:post).permit(:image, :caption)
+    end
+    
+    def flash_unsuccessful_message
+      # When rendering view, flash.now can be used; when redirecting to new view,
+      # use flash without the now
+      flash.now[:unsuccessful_action] = "Something went wrong!"
     end
 end
