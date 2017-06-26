@@ -30,6 +30,18 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       flash[:success_update] = "Image updated!"
       redirect_to post_path
+      # redirect_to post_path(@post)
+    end
+  end
+  
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:success_destroy] = "Image deleted!"
+      redirect_to posts_path
+    else 
+      flash[:unsuccess_destroy] = "Something went wrong!"
+      render action :edit
     end
   end
   

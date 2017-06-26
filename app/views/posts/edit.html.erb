@@ -8,7 +8,16 @@
           <%= image_tag(@post.image.url, height: '350', width: '350') %>
         </div>
         <br>
-       <%= render 'form' %>
+        <%= render 'form' %>
+        <div class="edit-links text-center">
+          <button type="button" class="btn btn-default btn-xs">
+            <%= link_to "Delete", post_path(@post.id), method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+          </button>
+          |
+          <button type="button" class="btn btn-default btn-xs">
+            <%= link_to "Cancel", posts_path %>
+          </button>
+        </div>
       </div>
     </div>
   </div>

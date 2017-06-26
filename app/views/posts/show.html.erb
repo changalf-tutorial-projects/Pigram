@@ -13,10 +13,13 @@
             <%= @post.caption %>
           </p>
           <div class="text-center">
-            <%= link_to "Edit", edit_post_path(@post.id) %> 
-          </div>
-          <div class="text-center">
-            <%= link_to "Cancel", posts_path %> 
+            <div class="btn btn-default btn-xs">
+              <%= link_to "Edit", edit_post_path(@post.id), class: "edit" %>
+            </div>
+            |
+            <div class="btn btn-default btn-xs">
+              <%= link_to "Cancel", posts_path, class: "cancel" %> 
+            </div>
           </div>
         </div>
       </div>
