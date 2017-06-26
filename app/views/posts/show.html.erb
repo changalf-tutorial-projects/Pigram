@@ -12,7 +12,12 @@
           <p class="caption">
             <%= @post.caption %>
           </p>
-          <%= link_to "Cancel", posts_path %>
+          <div class="text-center">
+            <%= link_to "Edit", edit_post_path(@post.id) %> 
+          </div>
+          <div class="text-center">
+            <%= link_to "Cancel", posts_path %> 
+          </div>
         </div>
       </div>
     </div>
