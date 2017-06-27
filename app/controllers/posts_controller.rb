@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :owned_post, only: [:edit, :update, :destroy]
   
   def new 
     @post = current_user.posts.build
@@ -55,6 +56,13 @@ class PostsController < ApplicationController
     
     def post_params
       params.require(:post).permit(:image, :caption)
+    end
+    
+    def owned_post
+      unless current_user == @post.user
+        flash[:alert] = "This post doesn't belong to you!"
+        redirect_to root_path
+      end
     end
     
     def flash_unsuccessful_message
