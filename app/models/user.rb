@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  
+  # The 'dependent: :destroy' command destroys all objects associated with a user (ie. all photos of user) 
+  has_many :posts, dependent: :destroy
          
   validates :username, presence: true, length: {minimum: 4, maximum: 30}
 end
