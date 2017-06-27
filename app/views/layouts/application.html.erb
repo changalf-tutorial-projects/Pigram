@@ -42,6 +42,19 @@
       </div><!-- /.container-fluid -->
     </nav>
     
+    <div class="container flash-container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" do %>
+          <% if type == "success" %>
+            <i class="glyphicon glyphicon-ok"></i>
+          <% else %>
+            <i class="glyphicon glyphicon-exclamation-sign"></i>
+          <% end %>
+          <%= msg %>
+        <% end %>
+      <% end %>
+    </div>
+    
     <div class="container">
       <%= yield %>
     </div>

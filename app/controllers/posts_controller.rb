@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      flash[:success_create] = "New image posted!"
+      flash[:success] = "New image posted!"
       redirect_to posts_path
     else
       flash_unsuccessful_message
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   
   def update
     if @post.update(post_params)
-      flash[:success_update] = "Image updated!"
+      flash[:success] = "Image updated!"
       redirect_to post_path
       # redirect_to post_path(@post)
     else
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   
   def destroy
     if @post.destroy
-      flash[:success_destroy] = "Image deleted!"
+      flash[:success] = "Image deleted!"
       redirect_to root_path
     else 
       flash_unsuccessful_message
@@ -59,6 +59,6 @@ class PostsController < ApplicationController
     def flash_unsuccessful_message
       # When rendering view, flash.now can be used; when redirecting to new view,
       # use flash without the now
-      flash.now[:unsuccessful_action] = "Something went wrong!"
+      flash.now[:alert] = "Something went wrong!"
     end
 end
