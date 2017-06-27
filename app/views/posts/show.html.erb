@@ -12,15 +12,23 @@
           <p class="caption">
             <%= @post.caption %>
           </p>
-          <div class="text-center">
-            <div class="btn btn-default btn-xs">
-              <%= link_to "Edit", edit_post_path(@post.id), class: "edit" %>
+          <% if @post.user.id == current_user.id %>
+            <div class="text-center edit-links">
+              <div class="btn btn-default btn-sm">
+                <%= link_to "Edit", edit_post_path(@post.id), class: "edit" %>
+              </div>
+              |
+              <div class="btn btn-default btn-sm">
+                <%= link_to "Cancel", posts_path, class: "cancel" %> 
+              </div>
             </div>
-            |
-            <div class="btn btn-default btn-xs">
-              <%= link_to "Cancel", posts_path, class: "cancel" %> 
+          <% else %>
+            <div class="text-center edit-links">
+              <div class="btn btn-default btn-sm">
+                <%= link_to "Cancel", posts_path, class: "cancel" %> 
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
