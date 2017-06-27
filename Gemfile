@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Bootstrap library to beautify pages
 gem 'bootstrap-sass', '~> 3.3.5'
 
+# Use Fontawesome sass for adding cool icons
+gem 'font-awesome-sass', '4.6.2'
+
 # Use Paperclip for uploading images
 gem 'paperclip', '~> 4.2'
 
@@ -43,6 +46,9 @@ gem 'simple_form', '~> 3.1.0'
 
 # Use Devise to autheticate user
 gem 'devise'
+
+# Use Hirb gem to organize database output in console
+gem 'hirb', '0.7.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
