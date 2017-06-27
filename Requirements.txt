@@ -1,0 +1,7 @@
+USER_AUTHENTICATION
+
+• User should be able to create an account and login.
+• User's comments and posts should belong to user only.
+• User should have the option of creating own username.
+• User should have the ability to comment on own post and other's posts.
+• User should be able to delete own posts at any time.
