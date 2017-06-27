@@ -1,36 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="post">
-        <div class="post-head">
-          <div class="name">
-            <b><%= @post.user.username %></b>
-          </div>
-        </div>
-        <div class="image-individual center-block">
-          <%= image_tag(@post.image.url(:medium)) %>
-          <p class="caption">
-            <%= @post.caption %>
-          </p>
-          <% if @post.user.id == current_user.id %>
-            <div class="text-center edit-links">
-              <div class="btn btn-default btn-sm">
-                <%= link_to "Edit", edit_post_path(@post.id), class: "edit" %>
-              </div>
-              |
-              <div class="btn btn-default btn-sm">
-                <%= link_to "Cancel", posts_path, class: "cancel" %> 
-              </div>
-            </div>
-          <% else %>
-            <div class="text-center edit-links">
-              <div class="btn btn-default btn-sm">
-                <%= link_to "Cancel", posts_path, class: "cancel" %> 
-              </div>
-            </div>
-          <% end %>
-        </div>
+<%= render 'post', @post: post %>
+  <% if @post.user.id == current_user.id %>
+    <div class="text-center edit-links">
+      <div class="btn btn-default btn-sm">
+        <%= link_to "Edit", edit_post_path(@post.id), class: "edit" %>
+      </div>
+      |
+      <div class="btn btn-default btn-sm">
+        <%= link_to "Cancel", posts_path, class: "cancel" %> 
       </div>
     </div>
-  </div>
+  <% else %>
+    <div class="text-center edit-links">
+      <div class="btn btn-default btn-sm">
+        <%= link_to "Cancel", posts_path, class: "cancel" %> 
+      </div>
+    </div>
+  <% end %>
 </div>

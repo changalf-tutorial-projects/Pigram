@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   
   def create
     @comment = @post.comments.build(comment_params)
-    @comment.user_id = current.user_id
+    @comment.user_id = current_user.id
     if @comment.save
       flash[:sucess] = "Comment posted."
       redirect_to :back
