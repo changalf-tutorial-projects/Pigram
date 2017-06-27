@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   
   # The 'dependent: :destroy' command destroys all objects associated with a user (ie. all photos of user) 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
          
   validates :username, presence: true, length: {minimum: 4, maximum: 30}
 end

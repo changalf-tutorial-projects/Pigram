@@ -1,4 +1,4 @@
-USER_AUTHENTICATION
+USER_PROFILES
 
 • User should be able to create an account and login.
 • User's comments and posts should belong to user only.
