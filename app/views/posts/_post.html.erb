@@ -19,7 +19,7 @@
             </div>
             <%= post.caption %>
           </div>
-          <div class="comments" id="comments_<%=post.id %>">
+          <div class="comments" id="comments_<%= post.id %>">   <!-- Different from tutorial? -->
             <% if post.comments %>
               <%= render post.comments, post: post %>
             <% end %>
