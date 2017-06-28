@@ -28,7 +28,7 @@
                 <%= comment.context %>
               </div>
               <% if comment.user == current_user %>
-                <%= link_to post_comment_path(post, comment), method: :delete, data: {confirm: "Are you sure"} do %>
+                <%= link_to post_comment_path(post, comment), method: :delete, data: {confirm: "Are you sure?"} do %>
                   <span><i class="glyphicon glyphicon-remove delete-comment"></i></span>
                 <% end %>
               <% end %>
@@ -42,7 +42,7 @@
         </div>
         <div class="comment-form col-sm-11">
           <%= form_for [post, post.comments.new] do |f| %>
-            <%= f.text_field :context, placeholder: 'Add a comment' %>
+            <%= f.text_field :context, placeholder: 'Add a comment.' %>
           <% end %>
         </div>
       </div>
