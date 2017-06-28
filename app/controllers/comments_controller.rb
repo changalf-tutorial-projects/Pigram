@@ -26,7 +26,8 @@ class CommentsController < ApplicationController
   
   private
     def comment_params
-      params.require(:comment).permit(:content)
+      # In this app, the column name that stores the comment value is called 'Context', not 'Content'!
+      params.require(:comment).permit(:context)
     end
     
     def set_post
