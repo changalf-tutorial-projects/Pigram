@@ -20,7 +20,7 @@
         </div>
         <% if post.comments %>
           <% post.comments.each do |comment| %>
-            <div class="comment">
+            <div id="comment">
               <div class="user-name">
                 <%= comment.user.username %>
               </div>
