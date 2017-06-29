@@ -18,7 +18,12 @@
 @import 'bootstrap';
 
 body {
-  background-color: #FFFFFF;
+  /* Credits to Garrett Parker */
+  background-image: image-url('/assets/garrett-parker-247225.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
@@ -28,6 +33,7 @@ body {
   background: #76b852;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-bottom: 0px;
 }
 
 .navbar-container {
@@ -203,12 +209,47 @@ body {
   margin-bottom: 40px;
 }
 
-// .image-responsive {
-//   display: block;
-//   margin: 0 auto;
-// }
+/* Signup form customizations */
 
-// .image-individual {
-//   margin-left: 50px;
-// }
+html {
+  height: 100%;  
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+}
+
+.log-in {
+  margin-right: auto;
+  text-align: center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading {
+  h1 {
+    text-align: center;
+  }
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+.well {
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+/* Login form customizations */
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+}
+
 

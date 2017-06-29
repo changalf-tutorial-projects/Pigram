@@ -1,29 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="well">
-        <h2 class="text-center">Join Photogram</h2>
-
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
-      
-        <div class="form-inputs">
-          <%= f.input :username, placeholder: "Username", required: true %>
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+<div class="registration-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="log-in panel">
+          <div class="well">
+            <h2 class="text-center">Join Picturesque</h2>
+            <br>
+            <br>
+    
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
+              
+              <div class="panel-body">
+                <%= f.input :username, placeholder: "Username", required: true, label: false, input_html: {class: 'input-lg'} %>
+                <%= f.input :email, placeholder: "Email", required: true, autofocus: true, label: false, input_html: {class: 'input-lg'} %>
+                <%= f.input :password, placeholder: "Password", required: true, label: false, input_html: {class: 'input-lg'} %>
+                <%= f.input :password_confirmation, placeholder: "Confirm Password", required: true, label: false, input_html: {class: 'input-lg'} %>
+                <%= f.button :submit, "Sign up", class: "btn-lg btn-info btn-block" %>
+              </div>
+            <% end %>
+          
+            <%= render "devise/shared/links" %>
+          </div>
         </div>
-      
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up", class: "btn btn-info" %>
-        </div>
-      <% end %>
-      
-      <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
 </div>
-
-
 
