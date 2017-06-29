@@ -48,7 +48,10 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise'
 
 # Use Hirb gem to organize database output in console
-gem 'hirb', '0.7.3'
+gem 'hirb', '~> 0.7.3'
+
+# Use Kaminari to paginate elements
+gem 'kaminari', '~> 0.16.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
