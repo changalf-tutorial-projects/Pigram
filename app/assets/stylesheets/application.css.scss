@@ -219,6 +219,12 @@ html {
 .registration-bg {
   padding-top: 4em;
   height: 100%;
+  background: image-url('/assets/richard-lock-262846.jpg');
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .log-in {
@@ -244,13 +250,14 @@ html {
 .well {
   padding-top: 25px;
   margin-top: 25px;
+  background: #FFFFFF;
 }
 
 /* Login form customizations */
 
 .login-bg {
   padding-top: 4em;
-  // height: 100;
+  height: 100;
   background: image-url('/assets/garrett-parker-247225.jpg');
   background-size: cover;
   -moz-background-size: cover;
