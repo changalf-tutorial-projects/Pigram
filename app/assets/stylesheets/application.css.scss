@@ -81,7 +81,7 @@ body {
 /* Posts customizations */
 
 .posts-wrapper {
-  padding-top: 40px;
+  padding-top: 10px;
   margin: 0 auto;
   max-width: 642px;
   width: 35%;
@@ -268,8 +268,17 @@ html {
 
 /* Post form customizations */
 
-.post-form-bg {
-  
+#image-preview {
+  margin: 0px auto;
+}
+
+#post-image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.post-photo-title, .update-photo-title {
+  margin-top: 50px;
 }
 
 
