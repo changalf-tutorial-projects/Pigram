@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
   
   def index
-    @posts = Post.all.order('created_at DESC').page(params[:page]).per(1)
+    @posts = Post.all.order('created_at DESC').page(params[:page]).per(3)
   end
   
   def create
