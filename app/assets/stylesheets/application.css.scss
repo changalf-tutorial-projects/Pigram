@@ -16,6 +16,8 @@
  
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 body {
   /* Credits to Garrett Parker */
@@ -155,10 +157,10 @@ body {
   line-height: 18px;
 }
 
-.comment-content {
+.comment-form .comment-content {
   font-size: 15px;
   line-height: 18px;
-  border: medium none;
+  border: none;
   width: 100%;
   color: #4B4F54;
 }
@@ -181,6 +183,8 @@ body {
 
 .glyphicon-heart-empty {
   padding-top: 2px;
+  margin-right: 40px;
+  float: right;
 }
 
 /* Image customizations */
@@ -294,10 +298,8 @@ html {
   border: 2px solid #4090DB;
   border-radius: 50%;
   :hover {
-    border: 1px solid #2D6DA8;
-    border-radius: 50%;
-    text-decoration: none;
     border: none;
+    text-decoration: none;
   }
 }
 
@@ -306,10 +308,20 @@ html {
   font-size: 12px;
   padding: 0px 9px;
   vertical-align: middle;
-  border: none;
+  text-decoration: none;
   a :hover {
     color: #2D6DA8;
   }
 }
 
+#post-something {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+}
 
+#post-something-icon {
+  position: absolute;
+  top: 42%;
+  left: 49.15%;
+}

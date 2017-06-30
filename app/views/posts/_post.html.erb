@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row posts-wrapper">
-    <div class="post">
+    <div class="col-md-12">
+      <div class="post">
       <div class="post-head">
         <div class="thumb-img">
         </div>
@@ -30,10 +31,10 @@
         </div>
       </div>
       <div class="comment-like-form row">
-        <div class="like-button col-sm-1">
+        <div class="like-button">
           <span><i class="glyphicon glyphicon-heart-empty"></i></span>
         </div>
-        <div class="comment-form col-sm-11">
+        <div class="comment-form">
           <%= form_for([post, post.comments.build], remote: true) do |f| %>
             <%= f.text_field :context, placeholder: 'Add a comment.', class: "comment_content", id: "comment_content_#{post.id}" %>
           <% end %>
@@ -41,6 +42,7 @@
       </div>
     </div>
   </div>
+    </div>
 </div>
 
 
