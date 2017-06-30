@@ -23,6 +23,8 @@
             </div>
             <%= post.caption %>
           </div>
+          <br>
+          <br>
           <div class="comments" id="comments_<%= post.id %>">   
             <% if post.comments.any? %>
               <div class="paginator" id="#comments-paginator-<%= post.id %>">
@@ -31,6 +33,7 @@
                   remote: true, class: "more-comments", data: {post_id: "#{post.id}", type: "html"} %>
                 <% end %>
               </div>
+              <br>
               <%= render post.comments.last(4), post: post %>
             <% end %>
           </div>
