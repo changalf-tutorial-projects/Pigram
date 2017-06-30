@@ -5,3 +5,15 @@ USER_PROFILES
 • User should have the option of creating own username.
 • User should have the ability to comment on own post and other's posts.
 • User should be able to delete own posts at any time.
+
+
+PAGINATING COMMENTS
+
+• Order of pagination should be oldest comments to newest comments.
+  • For posts, it was newest post to oldest post.
+• Paginate every 4 comments.
+• Display hint "View next 20 comments"
+• The hint is actually a clickable link.
+• Display this link below the oldest visible comment (ie. comment at the bottom).
+
+  
