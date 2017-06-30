@@ -17,3 +17,7 @@ PAGINATING COMMENTS
 • Display this link below the oldest visible comment (ie. comment at the bottom).
 
   
+PREVIEWING IMAGE
+
+• Replace the current image with new image to be posted.
+• Attach id of old picture with new picture.
