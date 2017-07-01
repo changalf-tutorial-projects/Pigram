@@ -1,19 +1,18 @@
 class ProfilesController < ApplicationController
   
   before_action :authenticate_user!
-  before_action :owned_profile
+  before_action :owned_profile, :only [:edit, :update]
+  before_action :set_user
   
   def show
-    @user = User.find_by(username: params[:username])
+    # The method 'find_by(columns_name, column_value'
     @posts = User.find_by(username: params[:username]).posts.order('created_at DESC')
   end
   
   def edit
-    @user = User.find_by(username: params[:username])
   end
   
   def update
-    @user = User.find_by(username: params[:username])
     if @user.update(profile_params)
       flash[:success] = "Your profile has been updated."
       redirect_to profile_path(@user.username)
@@ -25,6 +24,10 @@ class ProfilesController < ApplicationController
   end
   
   private
+    def set_user
+      @user = User.find_by(username: params[:username])
+    end
+    
     def profile_params
       params.require(:user).permit(:avatar, :bio)
     end
