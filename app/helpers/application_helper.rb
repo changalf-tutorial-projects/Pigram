@@ -9,6 +9,7 @@ module ApplicationHelper
   
   def form_image_select(post) 
     if post.image.exists?
+      puts "This is a URL: " + post.image.url
       return image_tag post.image.url(:medium), id: 'image-preview', class: 'img-responsive'
     else
       # Placeholder image from http://www.futurespast.co/wp-content/themes/bh_courage/assets/images/placeholder_featured_image.svg 

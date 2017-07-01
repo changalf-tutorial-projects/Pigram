@@ -20,4 +20,4 @@ PAGINATING COMMENTS
 PREVIEWING IMAGE
 
 • Replace the current image with new image to be posted.
-• Attach id of old picture with new picture.
+• Attach id of old picture with new picture.git 
