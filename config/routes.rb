@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  # Using a symbol (:username) to enable dynamic parameter, since usernames change
+  get ':username', to: 'profiles#show', as: :profile
 end
+
