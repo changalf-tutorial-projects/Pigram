@@ -320,7 +320,13 @@ html {
   left: 47%;
 }
 
-#post-something-icon {
+#no-posts {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+}
+
+#post-something-icon, #no-posts-icon {
   position: absolute;
   top: 42%;
   left: 49.15%;
