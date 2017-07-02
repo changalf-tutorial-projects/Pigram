@@ -186,11 +186,15 @@ body {
 .glyphicon-heart-empty {
   padding-top: 2px;
   margin-right: 40px;
-  float: right;
+  // float: left;
 }
 
 .likes {
   font-weight: bold;
+}
+
+.like-button {
+  float: left;
 }
 
 /* Image customizations */
