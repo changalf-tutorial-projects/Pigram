@@ -24,8 +24,6 @@
             </div>
             <%= post.caption %>
           </div>
-          <br>
-          <br>
           <div class="comments" id="comments_<%= post.id %>">   
             <% if post.comments.any? %>
               <div class="paginator" id="#comments-paginator-<%= post.id %>">
