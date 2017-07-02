@@ -1,7 +1,7 @@
 module PostsHelper
   def display_likes(post) 
     votes = post.votes_for.up.by_type(User)
-    if votes.size <= 8
+    if votes.size >= 1 && votes.size <= 8 
       return list_likers(votes) 
     else 
       count_likers(votes)
