@@ -39,6 +39,9 @@ class PostsController < ApplicationController
     end
   end
   
+  def like 
+  end
+  
   def destroy
     if @post.destroy
       flash[:success] = "Image deleted!"
