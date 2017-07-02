@@ -187,6 +187,10 @@ body {
   padding-top: 2px;
   margin-right: 40px;
   color: #FF0000;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: #FF0000;
+  }
 }
 
 .likes {
