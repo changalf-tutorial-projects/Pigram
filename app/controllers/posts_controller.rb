@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :like, :destroy]
   before_action :authenticate_user!
   before_action :owned_post, only: [:edit, :update, :destroy]
   
@@ -36,6 +36,15 @@ class PostsController < ApplicationController
       # redirect_to post_path(@post)
     else
       flash_unsuccessful_message
+    end
+  end
+  
+  def like 
+    if @post.liked_by current_user
+      respond_to do |format|
+        format.html {redirect_to :back}
+        format.js
+      end
     end
   end
   
