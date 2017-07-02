@@ -32,7 +32,7 @@ class ProfilesController < ApplicationController
       params.require(:user).permit(:avatar, :bio)
     end
     
-    def owned_profile 
+    def owned_profile
       unless current_user == @user
         flash[:alert] = "This profile doesn't belong to you!"
         redirect_to root_path
