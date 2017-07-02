@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :posts
   resources :posts do
     resources :comments
+    member do
+      get 'like'
+    end
   end
   # Using a symbol (:username) to enable dynamic parameter, since usernames change
   # HTTP Verb, path, controller#action, helper 
