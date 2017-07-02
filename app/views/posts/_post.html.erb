@@ -47,7 +47,7 @@
         </div>
         <div class="comment-form">
           <%= form_for([post, post.comments.build], remote: true) do |f| %>
-            <%= f.text_field :context, placeholder: 'Add a comment.', class: "comment_content", id: "comment_content_#{post.id}" %>
+            <%= f.text_field :context, placeholder: 'Add a comment.', class: "comment_content", id: "comment_content_#{post.id}", style: "border: none; width: 88%" %>
           <% end %>
         </div>
       </div>
