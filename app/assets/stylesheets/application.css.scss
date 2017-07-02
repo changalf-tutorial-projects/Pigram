@@ -86,7 +86,7 @@ body {
   padding-top: 10px;
   margin: 0 auto;
   max-width: 642px;
-  width: 35%;
+  width: 75%;
 }
 
 .post {
@@ -144,11 +144,13 @@ body {
       font-weight: 500;
       margin-right: 0.3em;
     }
+    .delete-comment {
+      float: right;
+    }
   }
   .comment {
     margin-bottom: 7px;
   }
-  margin-bottom: 7px;
   padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
@@ -167,7 +169,6 @@ body {
 
 .comment-like-form {
   padding-top: 24px;
-  margin-top: 24px;
   margin-left: 24px;
   padding-bottom: 15px;
   min-height: 68px;
@@ -274,6 +275,10 @@ html {
 
 #image-preview {
   margin: 0px auto;
+}
+
+.img-responsive {
+  width: 100%;
 }
 
 #post-image {
@@ -397,4 +402,6 @@ html {
   width: 150%;
   word-wrap: break-word;
 }
+
+
 
