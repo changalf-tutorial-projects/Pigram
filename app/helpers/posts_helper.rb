@@ -13,7 +13,7 @@ module PostsHelper
   private
     def like_plural(votes)
       if votes.count >= 2
-        return ' <b>like this</b>' 
+        return ' like this' 
       else
         return ' likes this'
       end
