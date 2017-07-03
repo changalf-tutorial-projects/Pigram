@@ -1,11 +1,13 @@
 <div class="dropdown notification-dropdown">
-  <button class="btn btn-default dropdown-toggle" type: 'button', id: 'dropdownMenu1', 
+  <button class="btn btn-default dropdown-toggle", type: 'button', id: 'dropdownMenu1', 
   data: {toggle: 'dropdown'}, 'aria-haspopup': true, 'aria-expanded': true>
     <%= current_user.notifications.count %>
     <span><i class="glyphicon glyphicon-flag"></i></span>
   </button>
-  <ul class="dropdown-menu" 'aria-lablledby': 'dropdownMenu1'>
+  <ul class="dropdown-menu", 'aria-lablledby': 'dropdownMenu1'>
     <li class="dropdown-header text-center">Notifications</li>
-    <li><%= render 'notification' %></li>
+    <li>
+      <%= render current_user.notifications.order('created_at DESC') %>
+    </li>
   </ul>
 </div>

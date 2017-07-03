@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notifications/link_through'
+
   root 'posts#index'
   devise_for :users, controllers: {registrations: 'registrations'}
   resources :posts
