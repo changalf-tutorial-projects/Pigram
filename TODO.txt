@@ -3,3 +3,11 @@
     • Dislike posts
     
 • Improve efficiency of displying users who like a post
+
+• Paginate notifications in index views
+• Display when someone commented on our post (use time_ago_in_words helper method)
+• Display read and unread notifications (count must also be changed; similar to add/remove comments)
+• Divide index page into read/unread
+• Add notifications for likes (logic is similar to comment notifications; like action in posts controller...; 
+  differences with 'notice_type' and 'identifier' parameters of the new Notification)
+  
