@@ -2,7 +2,7 @@
 
 one:
   user_id: 
-  subscribed_user_id: 
+  subscribed_user: 
   post_id: 
   identifier: 1
   type: 
@@ -10,7 +10,7 @@ one:
 
 two:
   user_id: 
-  subscribed_user_id: 
+  subscribed_user: 
   post_id: 
   identifier: 1
   type: 

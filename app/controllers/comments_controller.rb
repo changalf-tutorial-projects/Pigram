@@ -44,10 +44,10 @@ class CommentsController < ApplicationController
       @post = Post.find(params[:post_id])
     end
     
-    def create_notification(post)
+    def create_notification(post, comment)
       return if post.user.id == current_user.id
-      Notification.create(user_id: post.user.id, subscribed_user_id: current_user.id,
-      # In notifications table, 'notice type' = 'type'
-      post_id: post_id, comment_id: comment.id, type: 'comment')
+      Notification.create(user_id: post.user.id, notified_by_id: current_user.id,
+      # 'identifier' = 'comment_id' in notifications table
+      post_id: post.id, identifier: comment.id, notice_type: 'comment')
     end
 end
