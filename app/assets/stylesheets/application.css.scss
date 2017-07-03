@@ -65,6 +65,9 @@ body {
 
 .navbar-form {
   margin-left: 300px;
+  .navbar-left {
+    margin-top: 10px;
+  }
 }
 
 .navbar-default {
@@ -77,6 +80,13 @@ body {
       color: #FFFFFF;
       opacity: 0.80;
     }
+  }
+}
+
+.notification-dropdown {
+  margin-top: 10px;
+  button {
+    border: none;
   }
 }
 
