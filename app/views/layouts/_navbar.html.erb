@@ -24,6 +24,27 @@
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li>
+            <div class="dropdown notification-dropdown">
+              <button class="btn btn-default dropdown-toggle" type: 'button', id: 'dropdownMenu1', 
+              data: {toggle: 'dropdown'}, 'aria-haspopup': true, 'aria-expanded': true>
+                5
+                <span><i class="glyphicon glyphicon-flag"></i></span>
+              </button>
+              <ul class="dropdown-menu" 'aria-lablledby': 'dropdownMenu1'>
+                <li class="dropdown-header text-center">Notifications</li>
+                <li>
+                  <a href="#">Notification 1</a>
+                </li>
+                <li>
+                  <a href="#">Notification 2</a>
+                </li>
+                <li>
+                  <%= link_to "New Post", new_post_path %>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li><%= link_to "New Post", new_post_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
