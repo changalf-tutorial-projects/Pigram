@@ -432,5 +432,31 @@ html {
   }
 }
 
+/* Follow/unfollow button customizations */
+
+.follow-button {
+  text-transform: uppercase;
+  border-color: #4090DB;
+  color: #4090DB;
+  margin-left: 20px;
+  &:visited, &:focus, &:hover {
+    border-color: #2D6396;
+    color: #2D6396;
+  }
+}
+
+.unfollow-button {
+  text-transform: uppercase;
+  border-color: #66BD2B;
+  background-color: #66BD2B;
+  color: #FFFFFF;
+  margin-left: 20px;
+  &:visited, &:focus, &:hover {
+    border-color: #47821F;
+    background-color: #47821F;
+    color: #FFFFFF;
+  }
+}
+
 
 
