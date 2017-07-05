@@ -48,6 +48,10 @@ class PostsController < ApplicationController
     end
   end
   
+  def browse
+    @posts = Post.all.order('created_at DESC').page(params[:page]).per(3)
+  end
+  
   def destroy
     if @post.destroy
       flash[:success] = "Image deleted!"
