@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   
   # The 'dependent: :destroy' command destroys all objects associated with a user (ie. all photos of user) 
+  has_one :profile, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
