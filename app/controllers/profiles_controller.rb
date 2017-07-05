@@ -2,8 +2,8 @@ class ProfilesController < ApplicationController
   
   before_action :set_user
   before_action :authenticate_user!
-  # before_action :owned_profile, :only [:update, :edit]
-  before_action :owned_profile
+  before_action :owned_profile, only: [:update, :edit]
+  # before_action :owned_profile
   
   def show
     @posts = User.find_by(username: params[:username]).posts.order('created_at DESC')
@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
     
     def owned_profile
       unless current_user == @user
-        flash[:alert] = "This profile doesn't belong to you!"
+        flash[:alert] = "That profile doesn't belong to you!"
         redirect_to root_path
       end
     end
