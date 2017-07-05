@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
   # Using a symbol (:username) to enable dynamic parameter, since usernames change
-  # HTTP Verb, path, controller#action, helper 
+  # HTTP verb, URI pattern, controller#action, prefix 
   get ':username', to: 'profiles#show', as: :profile
   get ':username/edit', to: 'profiles#edit', as: :edit_profile
   patch ':username/edit', to: 'profiles#update', as: :update_profile
