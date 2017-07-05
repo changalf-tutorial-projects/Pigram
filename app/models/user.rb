@@ -24,9 +24,9 @@ class User < ActiveRecord::Base
   validates :username, presence: true, length: {minimum: 4, maximum: 30}
   
   def follow(user_id)
-    follower_relationships.create(following_id: user_id)
+    following_relationships.create(following_id: user_id)
   end
-  
+
   def unfollow(user_id)
     following_relationships.find_by(following_id: user_id).destroy
   end
