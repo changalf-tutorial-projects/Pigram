@@ -1,3 +1,10 @@
 # README
 
-Ruby on Rails clone of Instagram
+Picturesque is an Instagram clone webapp implemented in Ruby on Rails, based on tutorial at 
+https://www.dropbox.com/s/9vq430e9s3q7pu8/Let%27s%20Build%20Instagram%20with%20Ruby%20on%20Rails%20-%20Free%20Edition.pdf?dl=0.
+Users can sign up and post their photos while browsing other users' posts.  There is also an option to follow/unfollow others.
+Current improvements to make:
+
+      • better backgrounds for each page (eg. signup, login, browse, profile, etc.)
+      • grid style layout of posts
+      • sizing of posts
