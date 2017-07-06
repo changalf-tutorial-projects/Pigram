@@ -3,9 +3,9 @@ class ProfilesController < ApplicationController
   before_action :set_user
   before_action :authenticate_user!
   before_action :owned_profile, only: [:update, :edit]
-  # before_action :owned_profile
   
   def show
+    User.create(username: "Alfred")
     @posts = User.find_by(username: params[:username]).posts.order('created_at DESC')
   end
   

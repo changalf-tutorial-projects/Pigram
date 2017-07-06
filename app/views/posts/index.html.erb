@@ -1,18 +1,1 @@
-<div id="posts">
-  <%= render 'posts' %>
-</div>
-
-<% if Post.count == 0 %>
-  <div id="no-posts-icon">
-    <i class="fa fa-meh-o fa-5x text-center" aria-hidden="true"></i> 
-  </div>
-  <div id="no-posts">
-    <h4 class="text-center"><b>There is nothing to show!</b></h5>
-  </div>
-<% end %>
-
-<% if Post.count >= 3 %>
-  <div id="paginator" class="text-center">
-    <%= link_to_next_page @posts, 'LOAD MORE', remote: true, id: 'load_more' %>
-  </div>
-<% end %>
+<%= render 'post_dashboard', posts: @posts %>
