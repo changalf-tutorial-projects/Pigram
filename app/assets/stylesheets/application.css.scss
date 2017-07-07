@@ -44,23 +44,32 @@ body {
 }
 
 .navbar-container {
-  width: 90%;
   margin: 0 auto;
-  height: 55px;
+  height: 85px;
 }
 
 .navbar-header {
-  margin-left: 200px;
+  padding-left: 125px;
 }
 
 .navbar-brand {
   font-family: 'Pacifico', cursive;
-  font-size: 22px;
-  font-weight: 800;
   color: #FFFFFF;
   a {
     color: #FFFFFF;
   }
+}
+
+.glyphicon.glyphicon-camera {
+  font-size: 3.25em;
+}
+
+.app-name {
+  font-size: 3.25em;
+  color: #FFFFFF;
+  text-align: center;
+  padding-right: 190px;
+  padding-top: 10px;
 }
 
 .navbar-nav {
@@ -76,7 +85,7 @@ body {
 
 .navbar-default {
   background-color: #FFFFFF;
-  height: 54px;
+  height: 85px;
   .navbar-brand,
   .navbar-nav > li > a {
     color: #FFFFFF;
