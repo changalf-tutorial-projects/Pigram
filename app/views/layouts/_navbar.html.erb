@@ -16,7 +16,9 @@
           <i class="fa fa-bars" aria-hidden="true"></i> 
         </a>
         <% if user_signed_in? %>
-          <%= render 'notifications/notification_dropdown' %>
+          <div class="notification-symbol">
+            <%= render 'notifications/notification_dropdown' %>
+          </div>
         <% end %>
         <ul class="dropdown-menu">
           <% if user_signed_in? %>
