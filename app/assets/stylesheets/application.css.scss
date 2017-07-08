@@ -49,7 +49,7 @@ body {
 }
 
 .navbar-header {
-  padding-left: 125px;
+  padding-left: 185px;
 }
 
 .navbar-brand {
@@ -64,8 +64,8 @@ body {
   font-size: 3.25em;
 }
 
-.glyphicon.glyphicon-menu-hamburger {
-  font-size: 3.25em;
+.fa-bars {
+  font-size: 4.0em;
   color: #FFFFFF;
   float: right;
    &:hover, &:focus {
@@ -74,11 +74,16 @@ body {
   }
 }
 
+.navbar-nav > li {
+  float: right;
+  padding-top: 2px;
+}
+
 .app-name {
   font-size: 3.25em;
   color: #FFFFFF;
   text-align: center;
-  padding-right: 190px;
+  padding-right: 230px;
   padding-top: 10px;
 }
 
