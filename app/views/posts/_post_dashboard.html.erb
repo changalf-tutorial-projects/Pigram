@@ -2,6 +2,6 @@
   <%= render 'posts' %>
 </div>
 
-<div id="paginator text-center">
+<div id="paginator">
   <%= link_to_next_page @posts, 'LOAD MORE', remote: true, id: 'load_more' %>
 </div>
