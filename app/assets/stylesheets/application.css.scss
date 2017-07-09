@@ -215,7 +215,6 @@ body {
   padding-bottom: 15px;
   min-height: 68px;
   align-items: center;
-  border-top: 1px solid #EEEFEF;
   flex-direction: row;
   justify-content: center;
 }
@@ -240,6 +239,12 @@ body {
 
 .like-button {
   float: left;
+}
+
+.separator-border {
+  border: 1px solid #EEEFEF;
+  width: 575px;
+  margin-left: 15px;
 }
 
 /* Image customizations */
@@ -307,8 +312,7 @@ body.registration-bg {
 
 /* Login form customizations */
 
-.login-bg {
-  padding-top: 4em;
+body.login-bg {
   height: 100;
   background: image-url('/assets/login-bg.jpg');
   background-size: cover;
