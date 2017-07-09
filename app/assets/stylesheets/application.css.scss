@@ -101,6 +101,7 @@ body {
 .navbar-default {
   background-color: #FFFFFF;
   height: 85px;
+  border: none;
   .navbar-brand,
   .navbar-nav > li > a {
     color: #FFFFFF;
@@ -268,8 +269,7 @@ html {
   height: 100%;  
 }
 
-.registration-bg {
-  padding-top: 4em;
+body.registration-bg {
   height: 100%;
   background: image-url('/assets/registration-bg.jpg');
   background-size: cover;
@@ -301,7 +301,7 @@ html {
 
 .well {
   padding-top: 25px;
-  margin-top: 25px;
+  margin-top: 65px;
   background: #FFFFFF;
 }
 
